@@ -221,7 +221,7 @@ if uploaded_file is not None:
                     st.subheader(f"Country: {tab_name}")
                     country_df = filtered_df[filtered_df['Country'] == tab_name]
                     if country_df.empty:
-                        st.warning(f"No data for {tab_name}."}
+                        st.warning(f"No data for {tab_name}.")
                     else:
                         agg_cols = feature_cols + [target]
                         agg = country_df.groupby('Month')[agg_cols].sum().reset_index()
